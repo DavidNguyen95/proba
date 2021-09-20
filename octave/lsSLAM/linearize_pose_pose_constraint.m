@@ -25,8 +25,8 @@ function [e, A, B] = linearize_pose_pose_constraint(x1, x2, z)
   R1_t = [[-s1 -c1];[c1 -s1]];
   e = t2v(Z\(X1\X2));
   
-  A_xy = [-R12'*R_1' , R12'*R1_t'*(t2-t1)]; %jacobian cua vi tri i
-  B_xy = [R12'*R_1' , [0;0]]; % Jacobian cua vi tri j
+  A_xy = [-R12'*R_1' , R12'*R1_t'*(t2-t1)]; %jacobian position i
+  B_xy = [R12'*R_1' , [0;0]]; % Jacobian position j
   A = [A_xy;[0 0 -1]];
   B = [B_xy;[0 0 1]];
 

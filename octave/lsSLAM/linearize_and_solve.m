@@ -34,7 +34,7 @@ for eid = 1:length(g.edges)
     [e, A, B] = linearize_pose_pose_constraint(x1, x2, edge.measurement);
 
 
-    % TODO: compute and add the term to H and b
+    %  compute and add the term to H and b
     hii = A' * info_matrix * A;
     hij = A' * info_matrix * B;
     hji = B' * info_matrix * A;
@@ -57,7 +57,7 @@ for eid = 1:length(g.edges)
 
 
     if (needToAddPrior)
-      % TODO: add the prior for one pose of this edge
+      % add the prior for one pose of this edge
       % This fixes one node to remain at its current location
       H(1:3,1:3) = H(1:3,1:3) + eye(3,3);
       needToAddPrior = false;
@@ -81,12 +81,12 @@ for eid = 1:length(g.edges)
     
 
 
-    % TODO: compute and add the term to H and b
+    %  compute and add the term to H and b
     info_matrix = edge.information;
-    [e, A, B] = linearize_pose_landmark_constraint(x1, x2, edge.measurement);
+    [e, A, B] = linearize_pose_landmarkxy_constraint(x1, x2, edge.measurement);
 
 
-    % TODO: compute and add the term to H and b
+    % compute and add the term to H and b
     hii = A' * info_matrix * A;
     hij = A' * info_matrix * B;
     hji = B' * info_matrix * A;

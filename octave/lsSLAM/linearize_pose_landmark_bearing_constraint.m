@@ -10,7 +10,7 @@
 % B 2x2 Jacobian wrt l
 function [e, A, B] = linearize_pose_landmark_bearing_constraint(x, l, z)
 
-  % TODO compute the error and the Jacobians of the error
+  % compute the error and the Jacobians of the error
  X = v2t(x);
  R1 = X(1:2,1:2);
  c1 = R1(1,1); s1 = R1(2,1);
@@ -25,11 +25,11 @@ function [e, A, B] = linearize_pose_landmark_bearing_constraint(x, l, z)
  e = temp - z;
  e = atan2(sin(e),cos(e)); %(-pi,pi)
  
- A= 1/(delta'*delta) *[delta(2),-delta(1)]; % Jacobian theo vi tri robot
+ A= 1/(delta'*delta) *[delta(2),-delta(1)]; % Jacobian position 
  Ath = -1;
  A = [A, Ath];
  
- B = 1/(delta'*delta) *[-delta(2),delta(1)]; %Jacobian theo vi tri landmark
+ B = 1/(delta'*delta) *[-delta(2),delta(1)]; %Jacobian position landmark
  B = [B];
 
 end
