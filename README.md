@@ -5,7 +5,7 @@ Probabilistic robot - Project 2: Bearing only SLAM
 `cd octave/lsSLAM`  
 `octave-cli lsSLAM_full.m`  
 # Explaination file in octave/lsSLAM folder:
-lsSLAM_full.m : total functions, set init parameter for running program  
+lsSLAM_full.m : Set init parameter for running program  
 linearize_pose_pose_constraint.m : compute Jacobian between 2 robot positions.  
 linearize_pose_landmakr_bearing_constraint.m : Compute the error of a pose-landmark with bearing only constraint  
 linearize_and_solve.m : performs one iteration of the Gauss-Newton algorithm  
