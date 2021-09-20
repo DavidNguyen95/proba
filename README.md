@@ -1,15 +1,20 @@
-# proba
-Probabilistic robot - Project 2: Bearing only SLAM  
+# Probabilistic robot project
+Project 2: Bearing only SLAM  
 
-# Run project:
-`cd octave/lsSLAM`  
-`octave-cli lsSLAM_full.m`  
+#Dataset:
+Put data in datasets folder (type bearing)
+
 # Explaination file in octave/lsSLAM folder:
-lsSLAM_full.m : Set init parameter for running program  
+lsSLAM_full.m : Set init parameters for running program  
 linearize_pose_pose_constraint.m : compute Jacobian between 2 robot positions.  
 linearize_pose_landmakr_bearing_constraint.m : Compute the error of a pose-landmark with bearing only constraint  
 linearize_and_solve.m : performs one iteration of the Gauss-Newton algorithm  
 compute_global_error.m : Computes the total error of the graph  
+
+
+# Running project:
+`cd octave/lsSLAM`  
+`octave-cli lsSLAM_full.m`  
 
 # Results
 During loop, I save the all plots in plots folder. Here is some sample of results  
