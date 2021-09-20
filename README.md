@@ -1,8 +1,8 @@
 # Probabilistic robot project
 Project 2: Bearing only SLAM  
 
-#Dataset:
-Put data in datasets folder (type bearing)
+# Dataset:
+Put data in datasets folder (type bearing)  
 
 # Explaination file in octave/lsSLAM folder:
 lsSLAM_full.m : Set init parameters for running program  
